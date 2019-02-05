@@ -1,54 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <title>Portfolio</title>
 </head>
 
-<body id="bg-image">
+<body id="bg-img">
+    <div class="container-fluid h-100">
+        <div class="row h-50 align-items-center">
+            <div class="col d-flex justify-content-center align-items-center">
+                <div class="card mt-3" id="landing-card">
+                    <img class="card-img-top profile-picture" src="./img/owl.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h2 class="card-title text-center">Philipp Coufal</h2>
+                        <p class="card-content text-center">Software Engineer</p>
+                    </div>
+                </div>
+                <div class="card mt-3" id="timeline-card">
+                    <div class="card-body">
+                        <h3 class="card-title ml-4 text-center">Timeline</h2>
+                        <div class="row">
+                            <div class="col">
+                                <div class="timeline-container">
+                                    <ul class="timeline">
+                                        <li>
+                                            <h4>Projektarbeit - Firma Velux</h4>
+                                            <p class="secondary-color">12.2018 - laufend</p>
+                                        </li>
+                                        <li>
+                                            <h4>Zivildienst</h4>
+                                            <p class="secondary-color">08.2018 - laufend</p>
+                                        </li>
+                                        <li>
+                                            <h4>HTL Spengergasse</h4>
+                                            <p class="third-color">09.2012 - 06.2018</p>
+                                        </li>
+                                        <li>
+                                            <h4>Praktikum - APA-IT</h4>
+                                            <p class="third-color">07.2015 - 09.2015</p>
+                                        </li>
+                                        <li>
+                                            <h4>Praktikum - A1 Telekom</h4>
+                                            <p class="third-color">07.2014 - 08.2014</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
-    <header>
-        <div class="menu-btn">
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-            <div class="btn-line"></div>
-        </div>
-
-        <nav class="menu">
-            <ul class="menu-nav">
-                <li class="nav-item">
-                    <a href="/" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/about.html" class="nav-link">About me</a>
-                </li>
-                <li class="nav-item">
-                    <a href="/work.html" class="nav-link">Work</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main id="home">
-        <h1 class="lg-heading">
-            Philipp <span class="text-secondary">Coufal</span>
-        </h1>
-
-        <h2 class="sm-heading">
-            Programmer.
-        </h2>
-        <div class="icons">
-            <a href="#!">
-                <i class="fab fa-github fa-2x"></i>
-            </a>
-        </div>
-    </main>
-
 </body>
 
 </html>
