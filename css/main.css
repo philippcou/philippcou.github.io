@@ -6991,9 +6991,10 @@ body {
   .card li {
     background-color: #444; }
   .card#about-card {
-    width: 25rem;
+    width: 23rem;
     max-height: 30vh; }
   .card#landing-card {
+    width: 23rem;
     max-height: 60vh;
     max-width: 30rem; }
   .card#project-card {
