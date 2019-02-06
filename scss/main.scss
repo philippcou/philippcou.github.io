@@ -1,0 +1,153 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "timeline";
+
+$home-image: url(../img/background.jpg);
+$blur-color: #444;
+$primary-color: #444;
+$secondary-color: rgb(100, 185, 255);
+$third-color: #b0ffa3;
+$font-color: #fff;
+$background-opacity: 0.7;
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+      &#bg-img {
+        background: $home-image;
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+  
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          width: 100vw;
+          height: 100vh;
+          z-index: -1;
+          background: rgba($blur-color, $background-opacity);
+        }
+      }
+}
+
+footer{
+    background-color: $primary-color;
+    text-align: center;
+}
+
+.secondary-color{
+    color: $secondary-color;
+}
+
+.third-color{
+    color: $third-color;
+}
+
+
+
+body{
+    @include background;
+    color: $font-color;
+    //font-family: 'Roboto', sans-serif;
+}
+
+
+.img-thumbnail{
+    width: 10rem;
+}
+
+.card-body{
+    padding: 0;
+
+    h3{
+        padding-top: 0.8rem;
+    }
+}
+
+.card{
+    background-color: $primary-color;
+    min-height: max-content;
+    border: none;
+    li{
+        background-color: $primary-color;
+    }
+    &#about-card{
+        width: 25rem;
+        max-height: 30vh;
+    }
+
+    &#landing-card{
+        max-height: 60vh;
+        max-width: 30rem;   
+    }
+
+    &#project-card{
+        max-width: 40rem;
+        max-height: 60vh;
+    }
+}
+
+a{
+    color: $secondary-color;
+    @include easeOut();
+    &:hover {
+        color: $font-color;
+    }
+
+    &#scroll-button{
+        color: $third-color;
+    }
+}
+
+.link{
+    text-align: center;
+}
+
+
+#timeline-card{
+    width: max-content;
+    background-color: $primary-color;
+    height: max-content;
+    padding-right: 2rem; 
+}
+
+
+.timeline-container{
+    height: inherit;
+    width: 100%;
+}
+
+@include media-breakpoint-up(lg){
+    #landing-card{
+        margin-right: 5rem;
+    }
+
+    #project-card{
+        margin-left: 5rem;
+    }
+
+    .row{
+        height: 100%;
+    }
+
+    html{
+        height: 100vh;
+    }
+
+    body{
+        height: 100%;
+    }
+}
+
+
+@include media-breakpoint-down(md){
+    .col{
+        display:flex;
+        flex-direction: column;
+    }
+}
+
