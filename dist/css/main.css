@@ -6948,44 +6948,68 @@ ul.timeline {
       height: 20px;
       z-index: 400; }
 
+footer {
+  background-color: #444;
+  text-align: center; }
+
 .secondary-color {
   color: #64b9ff; }
 
 .third-color {
   color: #b0ffa3; }
 
-html {
-  height: 200vh; }
-
 body {
-  color: #fff;
-  height: 200vh; }
+  color: #fff; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
-    background-size: cover; }
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
     body#bg-img:after {
       content: '';
       position: absolute;
       top: 0;
       right: 0;
       width: 100vw;
-      height: 200vh;
+      height: 100vh;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.6); }
+      background: rgba(68, 68, 68, 0.7); }
 
-#landing-card {
-  max-height: 60vh;
-  max-width: 30rem;
-  border: none;
+.img-thumbnail {
+  width: 10rem; }
+
+.card-body {
+  padding: 0; }
+  .card-body h3 {
+    padding-top: 0.8rem; }
+
+.card {
+  background-color: #444;
   min-height: max-content;
-  background-color: #444; }
+  border: none; }
+  .card li {
+    background-color: #444; }
+  .card#about-card {
+    width: 25rem;
+    max-height: 30vh; }
+  .card#landing-card {
+    max-height: 60vh;
+    max-width: 30rem; }
+  .card#project-card {
+    max-width: 40rem;
+    max-height: 60vh; }
 
 a {
-  color: black;
+  color: #64b9ff;
   transition: all 0.5s ease-out; }
   a:hover {
-    color: #64b9ff; }
+    color: #fff; }
+  a#scroll-button {
+    color: #b0ffa3; }
+
+.link {
+  text-align: center; }
 
 #timeline-card {
   width: max-content;
@@ -6993,21 +7017,23 @@ a {
   height: max-content;
   padding-right: 2rem; }
 
-#project-card {
-  width: max-content;
-  margin-right: 20rem; }
-
 .timeline-container {
   height: inherit;
   width: 100%; }
 
 @media (min-width: 992px) {
-  #timeline-card {
-    width: max-content; }
   #landing-card {
-    margin-right: 5rem; } }
+    margin-right: 5rem; }
+  #project-card {
+    margin-left: 5rem; }
+  .row {
+    height: 100%; }
+  html {
+    height: 100vh; }
+  body {
+    height: 100%; } }
 
-@media (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
   .col {
     display: flex;
     flex-direction: column; } }
