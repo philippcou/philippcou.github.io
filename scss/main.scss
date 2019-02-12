@@ -59,7 +59,6 @@ body{
 
 .card{
     background-color: $primary-color;
-    min-height: max-content;
     li{
         background-color: $primary-color;
     }
@@ -84,13 +83,12 @@ body{
         max-width: 30rem;
 
         h3{
-            height:5rem;
             border-bottom: solid;
         }
         img{
-            overflow: hidden;
             object-fit: contain;
-            height: 50%;
+            overflow: hidden;
+            height: 20rem;
         }
     }
 }
@@ -125,7 +123,7 @@ a{
     width: 100%;
 }
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-only(xl){
     .row-lg-12{
         height: 100vh;
         &.landing-page{
@@ -133,6 +131,7 @@ a{
         }
 
     }
+    
 
     html{
         min-height: 100%;
