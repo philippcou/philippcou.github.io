@@ -13,6 +13,10 @@ $background-opacity: 0.8;
     transition: all 0.5s ease-out;
 }
 
+#project_link{
+    display:block;
+}
+
 @mixin background {
       &#bg-img {
         background: $home-image;
@@ -63,6 +67,10 @@ body{
         width: 100%;
         min-width: 20vw;
         max-width: 30rem;
+
+        &p{
+            margin: 0px;
+        }
     }
 
     &#landing-card{
@@ -81,7 +89,7 @@ body{
         }
         img{
             overflow: hidden;
-            object-fit: fill;
+            object-fit: contain;
             height: 50%;
         }
     }
@@ -155,4 +163,27 @@ a{
         width:100%;
     }
 }
+
+
+#project_link {
+    margin-top: 2rem;
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+  }
+  @keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
+  @-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+  }
 

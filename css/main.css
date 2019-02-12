@@ -6948,6 +6948,9 @@ ul.timeline {
       height: 20px;
       z-index: 400; }
 
+#project_link {
+  display: block; }
+
 .secondary-color {
   color: #ff8e24; }
 
@@ -6984,6 +6987,8 @@ body {
     width: 100%;
     min-width: 20vw;
     max-width: 30rem; }
+    .card#about-cardp {
+      margin: 0px; }
   .card#landing-card {
     width: 100%;
     max-height: 60vh;
@@ -6996,7 +7001,7 @@ body {
       border-bottom: solid; }
     .card#project-card img {
       overflow: hidden;
-      object-fit: fill;
+      object-fit: contain;
       height: 50%; }
 
 a {
@@ -7040,3 +7045,20 @@ a {
   .card {
     max-width: 30rem;
     width: 100%; } }
+
+#project_link {
+  margin-top: 2rem;
+  animation: bounce 1s infinite alternate;
+  -webkit-animation: bounce 1s infinite alternate; }
+
+@keyframes bounce {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-15px); } }
+
+@-webkit-keyframes bounce {
+  from {
+    transform: translateY(0px); }
+  to {
+    transform: translateY(-15px); } }
