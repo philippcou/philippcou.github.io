@@ -6979,8 +6979,7 @@ body {
   width: 10rem; }
 
 .card {
-  background-color: white;
-  min-height: max-content; }
+  background-color: white; }
   .card li {
     background-color: white; }
   .card#about-card {
@@ -6997,12 +6996,11 @@ body {
     height: 80vh;
     max-width: 30rem; }
     .card#project-card h3 {
-      height: 5rem;
       border-bottom: solid; }
     .card#project-card img {
-      overflow: hidden;
       object-fit: contain;
-      height: 50%; }
+      overflow: hidden;
+      height: 20rem; }
 
 a {
   color: #000;
@@ -7025,7 +7023,7 @@ a {
   height: inherit;
   width: 100%; }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .row-lg-12 {
     height: 100vh; }
     .row-lg-12.landing-page {
