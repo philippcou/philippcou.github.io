@@ -3,11 +3,11 @@
 
 $home-image: url(../img/background.jpg);
 $blur-color: #444;
-$primary-color: #444;
-$secondary-color: rgb(100, 185, 255);
+$primary-color: white;
+$secondary-color: rgb(255, 142, 36);
 $third-color: #b0ffa3;
-$font-color: #fff;
-$background-opacity: 0.7;
+$font-color: #000;
+$background-opacity: 0.8;
 
 @mixin easeOut {
     transition: all 0.5s ease-out;
@@ -23,7 +23,7 @@ $background-opacity: 0.7;
   
         &:after {
           content: '';
-          position: absolute;
+          position: fixed;
           top: 0;
           right: 0;
           width: 100vw;
@@ -34,11 +34,6 @@ $background-opacity: 0.7;
       }
 }
 
-footer{
-    background-color: $primary-color;
-    text-align: center;
-}
-
 .secondary-color{
     color: $secondary-color;
 }
@@ -46,8 +41,6 @@ footer{
 .third-color{
     color: $third-color;
 }
-
-
 
 body{
     @include background;
@@ -60,43 +53,45 @@ body{
     width: 10rem;
 }
 
-.card-body{
-    padding: 0;
-
-    h3{
-        padding-top: 0.8rem;
-    }
-}
-
 .card{
     background-color: $primary-color;
     min-height: max-content;
-    border: none;
     li{
         background-color: $primary-color;
     }
     &#about-card{
-        width: 23rem;
-        max-height: 30vh;
+        width: 100%;
+        min-width: 20vw;
+        max-width: 30rem;
     }
 
     &#landing-card{
-        width: 23rem;
+        width: 100%;
         max-height: 60vh;
         max-width: 30rem;   
     }
 
     &#project-card{
-        max-width: 40rem;
-        max-height: 60vh;
+        height: 80vh;
+        max-width: 30rem;
+
+        h3{
+            height:5rem;
+            border-bottom: solid;
+        }
+        img{
+            overflow: hidden;
+            object-fit: fill;
+            height: 50%;
+        }
     }
 }
 
 a{
-    color: $secondary-color;
+    color: $font-color;
     @include easeOut();
     &:hover {
-        color: $font-color;
+        color: $secondary-color;
     }
 
     &#scroll-button{
@@ -123,32 +118,41 @@ a{
 }
 
 @include media-breakpoint-up(lg){
-    #landing-card{
-        margin-right: 5rem;
-    }
+    .row-lg-12{
+        height: 100vh;
+        &.landing-page{
+            justify-content: space-evenly;
+        }
 
-    #project-card{
-        margin-left: 5rem;
-    }
-
-    .row{
-        height: 100%;
     }
 
     html{
-        height: 100vh;
+        min-height: 100%;
     }
 
     body{
-        height: 100%;
+        height: 100vh;
+    }
+
+    .card{
+        width:100%;
     }
 }
 
 
-@include media-breakpoint-down(md){
-    .col{
-        display:flex;
+@include media-breakpoint-down(lg){
+
+    .col-lg-6{
         flex-direction: column;
+    }
+
+    .row-lg-12{
+        flex-direction: column;
+
+    }
+    .card{
+        max-width: 30rem;
+        width:100%;
     }
 }
 

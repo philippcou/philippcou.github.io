@@ -6948,18 +6948,14 @@ ul.timeline {
       height: 20px;
       z-index: 400; }
 
-footer {
-  background-color: #444;
-  text-align: center; }
-
 .secondary-color {
-  color: #64b9ff; }
+  color: #ff8e24; }
 
 .third-color {
   color: #b0ffa3; }
 
 body {
-  color: #fff; }
+  color: #000; }
   body#bg-img {
     background: url(../img/background.jpg);
     background-attachment: fixed;
@@ -6968,44 +6964,46 @@ body {
     background-repeat: no-repeat; }
     body#bg-img:after {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
       right: 0;
       width: 100vw;
       height: 100vh;
       z-index: -1;
-      background: rgba(68, 68, 68, 0.7); }
+      background: rgba(68, 68, 68, 0.8); }
 
 .img-thumbnail {
   width: 10rem; }
 
-.card-body {
-  padding: 0; }
-  .card-body h3 {
-    padding-top: 0.8rem; }
-
 .card {
-  background-color: #444;
-  min-height: max-content;
-  border: none; }
+  background-color: white;
+  min-height: max-content; }
   .card li {
-    background-color: #444; }
+    background-color: white; }
   .card#about-card {
-    width: 23rem;
-    max-height: 30vh; }
+    width: 100%;
+    min-width: 20vw;
+    max-width: 30rem; }
   .card#landing-card {
-    width: 23rem;
+    width: 100%;
     max-height: 60vh;
     max-width: 30rem; }
   .card#project-card {
-    max-width: 40rem;
-    max-height: 60vh; }
+    height: 80vh;
+    max-width: 30rem; }
+    .card#project-card h3 {
+      height: 5rem;
+      border-bottom: solid; }
+    .card#project-card img {
+      overflow: hidden;
+      object-fit: fill;
+      height: 50%; }
 
 a {
-  color: #64b9ff;
+  color: #000;
   transition: all 0.5s ease-out; }
   a:hover {
-    color: #fff; }
+    color: #ff8e24; }
   a#scroll-button {
     color: #b0ffa3; }
 
@@ -7014,7 +7012,7 @@ a {
 
 #timeline-card {
   width: max-content;
-  background-color: #444;
+  background-color: white;
   height: max-content;
   padding-right: 2rem; }
 
@@ -7023,18 +7021,22 @@ a {
   width: 100%; }
 
 @media (min-width: 992px) {
-  #landing-card {
-    margin-right: 5rem; }
-  #project-card {
-    margin-left: 5rem; }
-  .row {
-    height: 100%; }
-  html {
+  .row-lg-12 {
     height: 100vh; }
+    .row-lg-12.landing-page {
+      justify-content: space-evenly; }
+  html {
+    min-height: 100%; }
   body {
-    height: 100%; } }
+    height: 100vh; }
+  .card {
+    width: 100%; } }
 
-@media (max-width: 991.98px) {
-  .col {
-    display: flex;
-    flex-direction: column; } }
+@media (max-width: 1199.98px) {
+  .col-lg-6 {
+    flex-direction: column; }
+  .row-lg-12 {
+    flex-direction: column; }
+  .card {
+    max-width: 30rem;
+    width: 100%; } }
